@@ -13,7 +13,7 @@ namespace GuessingGame
             Console.WriteLine("Take a guess?");
             var numberGuess = int.Parse(Console.ReadLine());
             int secretNumber = 42;
-            Console.WriteLine($"Your guess is {numberGuess}");
+            // Console.WriteLine($"Your guess is {numberGuess}");
 
             if (numberGuess == secretNumber)
             {
