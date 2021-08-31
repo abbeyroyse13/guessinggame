@@ -11,25 +11,24 @@ namespace GuessingGame
 
             Console.WriteLine("Can you guess the secret number?");
             Console.WriteLine("Take a guess?");
-            var numberGuess = Console.ReadLine();
+            var numberGuess = int.Parse(Console.ReadLine());
             int secretNumber = 42;
             Console.WriteLine($"Your guess is {numberGuess}");
-            Console.WriteLine($"The number is {secretNumber}");
 
+            if (numberGuess == secretNumber)
+            {
+                Console.WriteLine("You guessed right!");
+            }
+            else if (numberGuess > secretNumber)
+            {
+                Console.WriteLine("Wrong! Go lower.");
+            }
+            else
+            {
+                Console.WriteLine("Wrong! Go Higher.");
+            }
 
-
-            // if (secretNumber == numberGuess)
-            // {
-            //     Console.WriteLine("You guessed right!");
-            // }
-            // else if (secretNumber > numberGuess)
-            // {
-            //     Console.WriteLine("Wrong! Go lower.");
-            // }
-            // else 
-            // {
-            //     Console.WriteLine("Wrong! Go Higher.");
-            // }
+            // Console.WriteLine($"The number is {secretNumber}");
 
             // upper code is what I'm planning on using
             // lower code is what I tried to use previously but it didn't work
